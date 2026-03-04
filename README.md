@@ -1,14 +1,13 @@
-# Simulador de Financiamento
+# Simulador de Cálculos Matemáticos
 
-Aplicação web desenvolvida em Angular para simulação de financiamentos com cálculo de:
+Aplicação web desenvolvida em Angular para realizar operações matemáticas com frações, utilizando MathLive para edição e visualização das expressões.
 
-- Valor total financiado
-- IOF (fixo + variável)
-- TAC (tarifa de abertura de crédito)
-- Parcelas no sistema PRICE
-- Parcelas no sistema SAC
+O projeto, nesta primeira versão, permite realizar:
 
-O projeto permite alternar entre Pessoa Física (PF) e Pessoa Jurídica (PJ), aplicando automaticamente as regras vigentes de IOF.
+- Soma de frações
+- Subtração de frações
+
+Futuramente poderá ser expandido para multiplicação, divisão, e outras operações.
 
 ## Tecnologias Utilizadas
 
@@ -17,39 +16,27 @@ O projeto permite alternar entre Pessoa Física (PF) e Pessoa Jurídica (PJ), ap
 - HTML5
 - CSS3
 - Angular Forms (ngModel)
-- Intl API (formatação monetária)
+- MathLive (editor de expressões matemáticas em LaTeX)
+
+Observação: MathLive foi utilizado para permitir que o usuário visualize frações de forma intuitiva, mantendo a notação matemática correta.
 
 ## Funcionalidades
 
-✔ Simulação de financiamento  
-✔ Cálculo automático de IOF (fixo + variável até 365 dias)  
-✔ Cálculo de parcelas no sistema PRICE  
-✔ Cálculo de parcelas no sistema SAC  
-✔ Alternância entre PF e PJ  
-✔ Formatação automática de valores monetários (R$)  
-✔ Modal de validação de campos
-
-## Regras de IOF Utilizadas (2026)
-
-### Pessoa Física (PF)
-
-- 0,38% fixo
-- 0,0082% ao dia (limitado a 365 dias)
-
-### Pessoa Jurídica (PJ)
-
-- 0,95% fixo
-- 0,0082% ao dia (limitado a 365 dias)
+✔ Inserção de numerador e denominador para frações
+✔ Operações de soma e subtração
+✔ Validação de inputs (somente números positivos)
+✔ Prevenção de divisão por zero
+✔ Visualização da fração em formato matemático via MathLive
+✔ Mensagens de erro em casos inválidos
 
 ## Futuros Updates
 
-- Implementar a opção de carência nos cálculos
-- Adicionar página de conversão de taxas (mensal ↔ anual)
-- Adicionar página de cálculo de juros compostos
+- Implementar multiplicação e divisão de frações
+- Implementar formulas que resultados sejam exibidas como gráficos
 
 ## Demostração do Projeto
 
-- https://angular-calculos-financeiros.vercel.app/
+-
 
 ## Como Executar o Projeto
 
