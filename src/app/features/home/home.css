@@ -1,0 +1,237 @@
+.container_formulas {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.container_formulas h2{
+  margin-left: 2em;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  color: #324477;
+}
+
+math-field {
+  font-size: 24px;
+  border: 1px solid #ccc;
+  padding: 10px;
+
+  width: 90%;  
+
+  overflow: hidden; 
+}
+
+math-field::part(content) {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+math-field::part(menu-toggle) {
+  display: none;
+}
+
+math-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+
+
+
+/* Botões */
+
+/* Container da grade de botões */
+.container_adicionar_elementos {
+  display: flex;  
+  gap: 12px;
+  justify-content: center;
+}
+
+.titulo_container_adicionar_elementos > p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #324477;
+}
+
+/* Botão base */
+.math-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+
+  background: #1e1e1e;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover */
+.math-btn:hover {
+  background: #2c2c2c;
+  transform: translateY(-2px);
+}
+
+/* Clique */
+.math-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Ícones MathLive dentro do botão */
+.math-btn .ML__mathlive {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Variante clara opcional */
+.math-btn.light {
+  background: #f1f1f1;
+  color: #111;
+}
+
+.math-btn.light:hover {
+  background: #e2e2e2;
+}
+
+
+
+/* Informar valores */
+
+.container_informar_valores_fracao {
+  background: #535353;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  width: 20em;
+  margin: 20px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título */
+.container_informar_valores_fracao p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+/* Linha label + input */
+.linha-fracao {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Label */
+.linha-fracao label {
+  color: #cccccc;
+  font-size: 25px;
+  font-weight: 500;
+  width: 40px;
+  /* text-align: right; */
+  
+}
+
+/* Input menor */
+.linha-fracao input {
+  width: 100px;
+  height: 36px;
+
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #2b2b2b;
+  color: white;
+
+  padding: 0 10px;
+  font-size: 15px;
+
+  transition: all 0.2s ease;
+}
+
+.linha-fracao input:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+}
+
+/* Botão confirmar */
+.container_informar_valores_fracao button {
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 42px;
+  width: 12em;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: all 0.15s ease;
+}
+
+.container_informar_valores_fracao button:hover {
+  background: #00e676;
+  transform: translateY(-2px);
+}
+
+.container_informar_valores_fracao button:active {
+  transform: scale(0.96);
+}
+
+
+/* Botão Calcular separado */
+.calcular > button {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+
+  background: #2962ff;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 14px rgba(41, 98, 255, 0.35);
+}
+
+.calcular > button:hover {
+  background: #448aff;
+  transform: translateY(-2px);
+}
+
+.calcular > button:active {
+  transform: scale(0.96);
+}

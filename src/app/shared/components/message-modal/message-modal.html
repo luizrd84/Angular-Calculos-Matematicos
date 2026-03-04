@@ -1,0 +1,13 @@
+<div class="overlay" (click)="onClose()">
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <h2>{{ title }}</h2>
+
+    <p>{{ message }}</p>
+
+    <button (click)="onClose()">
+      {{ buttonText }}
+    </button>
+
+  </div>
+</div>

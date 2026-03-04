@@ -1,0 +1,76 @@
+
+<div class="container_formulas">
+    <h2>Equação a ser resolvida: </h2>
+    <math-field #mfPrincipal  smart-fence="false"> </math-field>
+
+    @if(exibirPaineisDemonstracao) {
+        @for (p of paineisDemonstracao; track p.id) {
+            <math-field
+                #mfPassos
+                [value]="p.expressao"
+                read-only>
+            </math-field>
+        }
+    }
+</div>
+
+@if (mostrarContainerInclusaoElementos) {
+    <div class="titulo_container_adicionar_elementos">
+        <p>Adicione os elementos à equação:</p>  
+    </div>
+    <div class="container_adicionar_elementos">  
+        
+        <button class="math-btn" (click)="adicionarElemento('fracaoPositiva')" 
+            [innerHTML]="botaoSimboloFracaoPositiva"></button>
+        <button class="math-btn" (click)="adicionarElemento('fracaoNegativa')" 
+            [innerHTML]="botaoSimboloFracaoNegativa"></button>
+        <button class="math-btn" (click)="adicionarElemento('+')"> + </button>
+        <button class="math-btn" (click)="adicionarElemento('-')"> - </button>
+        <button class="math-btn" (click)="adicionarElemento('(')"> ( </button>
+        <button class="math-btn" (click)="adicionarElemento(')')"> ) </button>
+    </div>
+}
+
+
+@if (mostrarContainerValoresFracao) {   
+
+    <div class="container_informar_valores_fracao">  
+        <p>Informe os valores da fração: </p>      
+
+         <div class="linha-fracao">
+            <label for="numerador"> x = </label>
+            <input type="text" name="numerador"
+                [(ngModel)]="inputNumerador"
+                (keydown)="apenasNumeros($event)"
+                (input)="corrigirValor($event)"
+            >
+        </div>
+        <div class="linha-fracao">
+            <label for="denominador"> y = </label>
+            <input type="text" name="denominador"
+                [(ngModel)]="inputDenominador"
+                (keydown)="apenasNumeros($event)"
+                (input)="corrigirValor($event)"
+            >
+            </div>
+        <button (click)="confirmarDigitacaoValoresFracao()">Confirmar</button>
+    </div>
+}
+
+
+<div class="calcular">
+    <button (click)="calcularResultado()">Calcular</button>
+    <button (click)="limparEquacao()">Limpar</button>
+</div>
+
+
+<!-- <button (click)="openModal()">Abrir Modal</button> -->
+@if (showModal) {
+    <app-message-modal 
+        [title]="modalTitle"
+        [message]="modalMessage"
+        [buttonText]="'Ok'"
+        (close)="closeModal()"
+    ></app-message-modal>
+}
+

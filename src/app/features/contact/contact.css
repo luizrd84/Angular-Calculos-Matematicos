@@ -1,0 +1,77 @@
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60vh;
+}
+
+/* infos ao lado da foto */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* nome maior e cor diferente */
+.profile-name {
+    font-size: 26px;
+    color: #1e3a8a;
+    margin: 0;
+}
+
+.profile-email,
+.profile-linkedin {
+    font-size: 16px;
+    color: #334155;
+    margin: 0;
+}
+
+.profile-linkedin a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.profile-linkedin a:hover {
+    text-decoration: underline;
+}
+
+
+
+.back_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+/* botão */
+.back_button {
+    margin-top: 5em;
+    margin-bottom: 1.5em;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #363e4b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* hover botão */
+.back_button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* clique botão */
+.back_button:active{
+    transform: translateY(0);
+}
+

@@ -1,0 +1,19 @@
+.container_footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(48, 83, 104); */
+
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    
+    /* background-color: #1e3a5f; */
+    /* background-color: #0f3057; */
+    background-color: #2c3e50;
+    color: white;
+
+    margin-top: 2em;
+}

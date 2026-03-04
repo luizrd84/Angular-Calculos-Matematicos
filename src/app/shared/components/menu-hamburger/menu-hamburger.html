@@ -1,0 +1,30 @@
+<!-- Hamburger Button -->
+<button class="hamburger" (click)="toggleMenu()">
+  ☰
+</button>
+
+<!-- Overlay --> 
+@if(isOpen) {
+<div class="overlay" (click)="closeMenu()"></div>
+}
+  
+<!-- Menu -->
+<nav 
+  class="menu"
+  [class.open]="isOpen"
+  [class.left]="side === 'left'"
+  [class.right]="side === 'right'"
+>
+  <ul>
+    <li><a [routerLink]="['/']">Home</a></li>
+    
+    <!-- <li><a [routerLink]="['simulacao-emprestimos-bancarios']">Empréstimos bancários</a></li> -->
+    <!-- <li><a [routerLink]="['conversao-taxas']">Conversão de taxas</a></li> -->
+    <!-- <li><a [routerLink]="['juros-compostos']">Juros compostos</a></li> -->
+
+
+    <li><a [routerLink]="['/contato']">Contato</a></li>
+  </ul>
+
+</nav>
+
