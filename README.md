@@ -22,12 +22,12 @@ Observação: MathLive foi utilizado para permitir que o usuário visualize fra�
 
 ## Funcionalidades
 
-✔ Inserção de numerador e denominador para frações
-✔ Operações de soma e subtração
-✔ Validação de inputs (somente números positivos)
-✔ Prevenção de divisão por zero
-✔ Visualização da fração em formato matemático via MathLive
-✔ Mensagens de erro em casos inválidos
+- Inserção de numerador e denominador para frações
+- Operações de soma e subtração
+- Validação de inputs (somente números positivos)
+- Prevenção de divisão por zero
+- Visualização da fração em formato matemático via MathLive
+- Mensagens de erro em casos inválidos
 
 ## Futuros Updates
 
